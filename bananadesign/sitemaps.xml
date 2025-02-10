@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/bananadesign/sitemaps_xsl.xsl"?>
+<sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>/bananadesign/post-sitemap1.xml</loc>
+</sitemap>
+<sitemap>
+<loc>/bananadesign/page-sitemap1.xml</loc>
+<lastmod>2025-02-07T17:18:55+01:00</lastmod>
+</sitemap>
+<sitemap>
+<loc>/bananadesign/category-sitemap1.xml</loc>
+</sitemap>
+<sitemap>
+<loc>/bananadesign/post_tag-sitemap1.xml</loc>
+</sitemap>
+</sitemapindex>
