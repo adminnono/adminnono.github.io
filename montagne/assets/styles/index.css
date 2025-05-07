@@ -215,6 +215,93 @@ header nav .nav-right li:hover {
           transform: scale(1.3);
 }
 
-img {
-  width: 50%;
+main {
+  width: 85%;
+  margin: 0 auto 30px;
+  background: rgb(243, 243, 243);
+}
+main img {
+  width: 100%;
+}
+main .section1 {
+  width: 80%;
+  margin: 0 auto;
+}
+main .section1 span {
+  padding: 70px 0;
+  position: relative;
+  display: block;
+}
+main .section1 span:before, main .section1 span:after {
+  content: "";
+  position: absolute;
+  width: 37%;
+  height: 1px;
+  background: rgb(209, 209, 209);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 700px) {
+  main .section1 span:before, main .section1 span:after {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 450px) {
+  main .section1 span:before, main .section1 span:after {
+    width: 26%;
+  }
+}
+main .section1 span:before {
+  left: 0;
+}
+main .section1 span:after {
+  right: 0;
+}
+main .section1 h2 {
+  font-family: inter-bold, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+main .section1 p {
+  width: 60%;
+  margin: 30px auto;
+  line-height: 35px;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+main .section1 .btn {
+  margin: 50px 0 90px;
+}
+main .section2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid rgb(209, 209, 209);
+}
+main .section2 .left-part,
+main .section2 .right-part {
+  padding: 60px;
+}
+main .section2 .left-part span,
+main .section2 .right-part span {
+  font-size: 0.75rem;
+}
+main .section2 .left-part h3,
+main .section2 .right-part h3 {
+  margin: 20px 0;
+  font-family: inter-bold, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+main .section2 .left-part p,
+main .section2 .right-part p {
+  text-align: left;
+  line-height: 30px;
+  margin: 30px 0;
+  font-size: 0.8rem;
+}
+main .section2 .left-part {
+  border-right: 1px solid rgb(209, 209, 209);
 }/*# sourceMappingURL=index.css.map */
