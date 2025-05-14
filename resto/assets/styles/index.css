@@ -22,10 +22,19 @@ li {
   list-style: none;
 }
 
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
 body {
   text-align: center;
   font-family: Roboto, serif;
   background: #21201e;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -75,6 +84,12 @@ header nav ul {
 }
 header nav ul li {
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+header nav ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 header nav .nav-icons {
   display: -webkit-box;

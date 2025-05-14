@@ -43,8 +43,17 @@ li {
   list-style: none;
 }
 
+a {
+  color: $white;
+  text-decoration: none;
+}
+
 body {
   text-align: center;
   font-family: $font3;
   background: $black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
