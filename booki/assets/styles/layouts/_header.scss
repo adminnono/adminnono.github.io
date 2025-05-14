@@ -1,0 +1,67 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-booki {
+  padding: 30px 50px;
+  width: 170px;
+}
+.navigation {
+  display: flex;
+  padding: 0 25px;
+}
+.liens-navigation {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 68px;
+}
+.lien-navigation {
+  font-size: 1rem;
+  padding: 14px 0 0 0;
+  border-top: 2px solid transparent;
+}
+.lien-navigation:hover {
+  border-top: 2px solid $blue;
+  color: $blue;
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .logo-booki {
+    padding: 30px;
+    margin: auto;
+  }
+  .navigation {
+    padding: 0;
+  }
+  .liens-navigation {
+    flex-basis: 100%;
+    gap: 0;
+  }
+  .lien-navigation {
+    padding: 0;
+  }
+  .lien-navigation {
+    flex-basis: 50%;
+    border-top: none;
+    border-bottom: 2px solid $lightgrey;
+    text-align: center;
+    padding: 0 0 15px 0;
+  }
+  .lien-navigation:hover {
+    border-top: none;
+    border-bottom: 2px solid $blue;
+  }
+}

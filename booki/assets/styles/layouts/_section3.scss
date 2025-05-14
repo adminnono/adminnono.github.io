@@ -1,0 +1,56 @@
+/* Activités pour desktop */
+.activités-marseille {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+}
+.titre-activités {
+  margin: 0;
+  font-size: 23px;
+}
+.flexbox-activités {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+}
+.boite-activité {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  box-shadow: 0rem 0.1875rem 0.9375rem 0rem rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.boite-activité:hover {
+  transform: scale(1.04);
+}
+.contenu-boite-activité {
+  cursor: pointer;
+}
+.image-boite-activité {
+  position: relative;
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.titre-activité {
+  padding: 20px 19px;
+  margin: 0;
+}
+/* Fin Activités pour desktop */
+
+@media (max-width: 768px) {
+  .flexbox-activités {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .boite-activité {
+    width: 100%;
+  }
+  .image-boite-activité {
+    height: 141px;
+  }
+}

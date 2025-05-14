@@ -1,0 +1,252 @@
+/* Hébergements à Marseille et les plus populaires pour desktop*/
+.HebergementsMarseille-Populaires {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+}
+.HebergementsMarseille {
+  display: flex;
+  flex-direction: column;
+  width: 66.6%;
+  padding: 30px;
+  background-color: $lightgrey;
+  border-radius: 15px;
+  gap: 30px;
+}
+.Populaires {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  background-color: $lightgrey;
+  border-radius: 15px;
+  padding: 30px;
+  gap: 30px;
+}
+/* Fin Hébergements à Marseille et les plus populaires pour desktop*/
+
+/* Logement pour desktop*/
+.division-titre-hebergements-marseille {
+  display: flex;
+}
+/* Fin Logement pour desktop*/
+
+/* Titre du logement */
+.titre-hebergements-marseille {
+  margin: 0;
+  font-size: 23px;
+}
+/* Cartes d'hébergement article */
+.grid-logements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+/* Cartes d'hébergement */
+.carte-hébergement {
+  background-color: white;
+  box-shadow: 0rem 0.1875rem 0.9375rem 0rem rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.carte-hébergement:hover {
+  transform: scale(1.04);
+}
+.voirplus {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Contenu carte d'hébergement */
+.lien-carte-hébergement {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 15px;
+  gap: 4px;
+}
+.contenu-carte-hébergement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  gap: 8px;
+}
+.image-hébergement {
+  position: relative;
+  height: 114px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  padding: 5px;
+}
+.description-carte-hébergement {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.titre-carte-hébergement {
+  margin: 0;
+}
+.prix-carte-hébergement {
+  font-size: 14px;
+  margin: 0;
+}
+.carte-hébergement-avis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  gap: 0;
+}
+.carte-hébergement-avis .fa-star {
+  display: flex;
+  align-items: center;
+  width: 14.301px;
+  height: 13.301px;
+}
+/* Fin Contenu carte d'hébergement */
+
+/* Les plus populaires pour desktop*/
+.division-titre-populaires {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Fin les plus populaires pour desktop*/
+
+/* Titre les plus populaires */
+.titre-populaires {
+  margin: 0;
+  font-size: 23px;
+}
+.fa-chart-line {
+  width: 18px;
+  height: 15.75px;
+  color: $blue;
+}
+/* Titre les plus populaires */
+
+/* Article sur les cartes les plus populaires */
+.cartes-populaires {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* Fin Article sur les cartes les plus populaires */
+
+/*Cartes Les plus populaires */
+.carte-populaire {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  box-shadow: 0rem 0.1875rem 0.9375rem 0rem rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.carte-populaire:hover {
+  transform: scale(1.04);
+}
+/*Fin cartes les plus populaires */
+
+/* Contenu des cartes les plus populaires */
+.lien-carte-populaire {
+  display: flex;
+  width: 100%;
+  margin: 5px;
+}
+.contenu-carte-populaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 5px 5px 15px;
+}
+.image-populaire {
+  position: relative;
+  height: 134px;
+  width: 33.4%;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+.description-carte-populaire {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.titre-carte-populaire {
+  margin: 0;
+}
+.prix-carte-populaire {
+  font-size: 14px;
+  margin: 0;
+}
+.carte-populaire-avis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  gap: 2px;
+}
+.carte-populaire-avis .fa-star {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 1024px) {
+  .HebergementsMarseille-Populaires {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+  .HebergementsMarseille {
+    width: 100%;
+  }
+  .Populaires {
+    width: 100%;
+  }
+  /* Logements */
+  .grid-logements {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .image-hébergement {
+    height: 114px;
+  }
+}
+
+@media (max-width: 768px) {
+  .HebergementsMarseille-Populaires {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .HebergementsMarseille {
+    border-radius: 0;
+    background-color: white;
+    padding: 20px;
+  }
+  .Populaires {
+    border-radius: 0;
+    padding: 30px 20px;
+  }
+
+  .grid-logements {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .carte-hébergement {
+    width: 100%;
+  }
+  /* Fin Cartes de logement */
+
+  /* Cartes les plus populaires */
+  .cartes-populaires {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .carte-populaire {
+    width: 100%;
+  }
+}
