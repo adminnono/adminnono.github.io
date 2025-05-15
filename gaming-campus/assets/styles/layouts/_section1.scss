@@ -1,0 +1,38 @@
+.icon-part {
+  background: rgb(15, 15, 15);
+  padding: 65px 0;
+  color: $white1;
+}
+.icon-part-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.lip-logo {
+  margin-bottom: 30px;
+}
+.icon-part h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.icon-part p {
+  width: 80%;
+  margin: 10px auto 20px;
+}
+.icon-part button {
+  padding: 9px 32px;
+}
+
+@media screen and (max-width: 704px) {
+  .icon-part-container {
+    display: block;
+  }
+  .icon-part {
+    padding: 0 0 30px;
+  }
+  .list-icon-part {
+    margin-top: 40px;
+  }
+}

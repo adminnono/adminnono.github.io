@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Montserrat1";
+  src: url(../fonts/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat2";
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+$font1: Montserrat1, sans-serif;
+$font2: Montserrat2, sans-serif;
+
+$purple: rgb(95, 4, 170);
+$black: black;
+$black1: rgba(128, 128, 128, 0.25);
+$black2: rgba(0, 0, 0, 0.9);
+$black3: rgb(15, 15, 15);
+$white: white;
+$white1: whitesmoke;
+$white2: rgba(245, 245, 245, 0.8);
+$white3: rgb(235, 235, 235);
+$grey: 0 2px 10px #888;
+$green: rgb(180, 180, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font2;
+  list-style: none;
+}
+
+a,
+a:active {
+  color: black;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: 1px solid whitesmoke;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+button:hover {
+  color: black;
+  background: whitesmoke;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}

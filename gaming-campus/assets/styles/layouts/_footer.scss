@@ -1,0 +1,16 @@
+footer {
+  background: $black3;
+  color: $white1;
+  padding: 25px;
+}
+footer h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
