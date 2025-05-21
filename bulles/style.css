@@ -1,0 +1,29 @@
+body {
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.bubble {
+  border-radius: 300px;
+  position: absolute;
+  background: rgba(255, 166, 0, 0.6);
+  opacity: 0;
+  animation: anim 8s forwards;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(720deg);
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10rem;
+  color: green;
+}
