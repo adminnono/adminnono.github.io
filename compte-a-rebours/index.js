@@ -1,10 +1,16 @@
 let totalSeconds;
-
+let interval;
 const countDown = () => {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
-  countdownDisplay.textContent = `${minutes} : ${seconds}`;
-  console.log(minutes, seconds);
+  const sec = seconds < 10 ? "0" + seconds : seconds;
+  countdownDisplay.textContent = `${minutes} : ${sec}`;
+  if (totalSeconds > 0) {
+    totalSeconds--;
+  } else {
+    countdownDisplay.textContent = "C'est terminé";
+    clearInterval(interval);
+  }
 };
 
 form.addEventListener("submit", (e) => {
@@ -14,6 +20,7 @@ form.addEventListener("submit", (e) => {
   } else {
     totalSeconds = choice.value * 60;
     choice.value = "";
+    clearInterval(interval);
+    interval = setInterval(countDown, 1000);
   }
-  setInterval(countDown, 1000);
 });
