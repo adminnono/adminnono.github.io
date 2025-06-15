@@ -30,6 +30,7 @@ const bookingCalc = () => {
     new Date(end_date.value) - new Date(start_date.value)
   );
   let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  console.log(diffDays);
   total.textContent = nightPrice.textContent * diffDays;
 };
 
