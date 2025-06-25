@@ -1,6 +1,9 @@
 const countriesContainer = document.querySelector(".countries-container");
+const btnSort = document.querySelectorAll(".btnSort");
+console.log(btnSort);
+
 let countriesData = [];
-let sortMethod = "minToMax";
+let sortMethod = "maxToMin";
 const fetchCountries = async () => {
   await fetch(
     "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags"
@@ -23,6 +26,8 @@ const countriesDisplay = () => {
         return b.population - a.population;
       } else if (sortMethod === "minToMax") {
         return a.population - b.population;
+      } else if (sortMethod === "alpha") {
+        return a.name.common.localeCompare(b.name.common);
       }
     })
     .slice(0, inputRange.value)
@@ -46,4 +51,9 @@ inputRange.addEventListener("input", () => {
   rangeValue.textContent = inputRange.value;
 });
 
-// 7 - Gérer les 3 boutons pour trier (méthode sort()) les pays
+btnSort.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    sortMethod = e.target.id;
+    countriesDisplay();
+  });
+});
