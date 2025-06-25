@@ -1,3 +1,4 @@
+const countriesContainer = document.querySelector(".countries-container");
 let countriesData = [];
 const fetchCountries = async () => {
   await fetch(
@@ -6,12 +7,25 @@ const fetchCountries = async () => {
     .then((res) => res.json())
     .then((data) => (countriesData = data));
   console.log(countriesData);
+  countriesDisplay();
 };
+
+const countriesDisplay = () => {
+  countriesContainer.innerHTML = countriesData
+    .map(
+      (country) => `
+<div class="card">
+<img src = ${country.flags.svg} alt= "flag of ${country.name.common}">
+<h2>${country.name.common}</h2>
+<h4>${country.capital}</h4>
+<p>Population : ${country.population.toLocaleString()}</p>
+</div>
+  `
+    )
+    .join("");
+};
+
 window.addEventListener("load", fetchCountries);
-
-// 3 - Passer les données à une variable
-
-// 4 - Créer une fonction d'affichage, et paramétrer l'affichage des cartes de chaque pays grace à la méthode MAP
 
 // 5 - Récupérer ce qui est tapé dans l'input et filtrer (avant le map) les données
 
