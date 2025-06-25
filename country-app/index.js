@@ -1,5 +1,6 @@
 const countriesContainer = document.querySelector(".countries-container");
 let countriesData = [];
+let sortMethod = "minToMax";
 const fetchCountries = async () => {
   await fetch(
     "https://restcountries.com/v3.1/all?fields=name,population,region,capital,flags"
@@ -12,6 +13,19 @@ const fetchCountries = async () => {
 
 const countriesDisplay = () => {
   countriesContainer.innerHTML = countriesData
+    .filter((country) =>
+      country.name.common
+        .toLowerCase()
+        .includes(inputSearch.value.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortMethod === "maxToMin") {
+        return b.population - a.population;
+      } else if (sortMethod === "minToMax") {
+        return a.population - b.population;
+      }
+    })
+    .slice(0, inputRange.value)
     .map(
       (country) => `
 <div class="card">
@@ -26,9 +40,10 @@ const countriesDisplay = () => {
 };
 
 window.addEventListener("load", fetchCountries);
-
-// 5 - Récupérer ce qui est tapé dans l'input et filtrer (avant le map) les données
-
-// 6 - Avec la méthode Slice gérer le nombre de pays affichés (inputRange.value)
+inputSearch.addEventListener("input", countriesDisplay);
+inputRange.addEventListener("input", () => {
+  countriesDisplay();
+  rangeValue.textContent = inputRange.value;
+});
 
 // 7 - Gérer les 3 boutons pour trier (méthode sort()) les pays
